@@ -1,0 +1,43 @@
+<div class="wordTitle">
+  <%= @word.title %>
+</div>
+<div class="wordDate">
+<%=  @word.impressionist_count %>回確認済
+<%# <%= number_with_delimiter(@page_views) %> 
+  <%# <%= @word.created_at %> 
+</div>
+<div class="wordAuthor">
+</div>
+<% if user_signed_in? && current_user.id == @word.user_id %>
+<div class="wordManage">
+  <%= link_to "編集", edit_word_path(@word.id), class: "wordManage__edit" %>
+  <%= link_to "削除", word_path(@word.id), method: :delete, class: "wordManage__delete" %>
+</div>
+<% end %>
+<div class="wordText">
+  <%= simple_format @word.explanation %>
+  <%# simple_formatで自動改行 %>
+</div>
+<div class="container">
+  <% if current_user %>
+    <%= form_with(model: [@word, @comment], local: true) do |form| %>
+      <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
+      <%= form.submit "登録" %>
+    <% end %>
+  <% else %>
+    <strong><p>※※※ コメントの登録には新規登録/ログインが必要です ※※※</p></strong>
+  <% end %>
+</div>
+<div class="comments">
+  <h4>＜コメント一覧＞</h4>
+  <% if @comments %>
+  <%# コメントがある場合 %>
+    <% @comments.each do |comment| %>
+    <%# @commentsの配列の中身であるレコードを取り出す %>
+      <p>
+        <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+        <%= comment.text %>
+      </p>
+    <% end %>
+  <% end %>
+</div>

@@ -1,0 +1,173 @@
+body{
+  min-width: 650px;
+  background-image: url("freenut.jpg");
+  background-size: cover;
+  .header{
+    height: 56px;
+    width: 100%;
+    padding: 0 150px;
+    color: red;
+    display: flex;
+    justify-content: space-between;
+    &__title{
+      font-size: 30px;
+      line-height: 56px;
+      font-family: fantasy;
+      &--text{
+        text-decoration: none;
+        color: blue;
+      }
+    }
+    &__right{
+        position: relative;
+        height: 50px;
+        right: 0;
+        span {
+          top: 5px;
+          display: block;
+          float: left;
+          width: 150px;
+          height: 50px;
+          font-size: 1.2em;
+          text-align: center;
+          line-height: 50px;
+          cursor: pointer;
+          position: relative;
+          &:after {
+            content: '▼';
+            font-size: 1em;
+            margin-left: -4px;
+          }
+          &:hover ul {
+            display: block;
+          }
+        }
+        ul {
+          display: none;
+          position: absolute;
+          right: 0;
+          border-left: 1px solid #d8d8d8;
+          border-right: 1px solid #d8d8d8;
+          box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
+          li {
+            background-color: #f0f0f0;
+            a {
+              padding: 10px 20px;
+              border-bottom: 1px solid #d8d8d8;
+            }
+          }
+        } 
+      &--btn{
+        text-decoration: none;
+        line-height: 56px;
+        color: red;
+        margin-left: 15px;
+        cursor: pointer;
+      }
+    }
+  }
+  .contents{
+    margin: 30px auto 0;
+    height: calc(100vh - 56px);
+    width: 70%;
+    overflow: scroll;
+    .content{
+      padding: 10px;
+      border-bottom: 1px solid lightgray;
+      display: flex;
+      &__right{
+        &__top{
+          font-size: larger;
+          margin: 0;
+          cursor: pointer;
+          &--title{
+            color: red;
+          }
+        }
+        &__bottom{
+          font-size: 15px;
+          display: flex;
+          &--userName{
+            cursor: pointer;
+            &--btn{
+              text-decoration: none;
+              color: green;
+            }
+          }
+        }
+      }
+    }
+    &__title{
+      font-size: 30px;
+      font-weight: bold;
+      padding-top: 30px;
+      text-align: center;
+    }
+  }
+  .wordTitle{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .wordDate{
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  .wordAuthor{
+    font-size: 15px;
+    color: black;
+    text-align: center;
+  }
+  .wordManage{
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+    &__edit{
+      display: block;
+      border-radius: 5px;
+      color: blue;
+      padding: 0 10px;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+    &__delete{
+      display: block;
+      border-radius: 5px;
+      color: red;
+      padding: 0 10px;
+      text-decoration: none;
+      margin-left: 10px;
+    }
+  }
+  .wordText{
+    margin: 20px 30px;
+  }
+  .form{
+    width: 85%;
+    height: 100%;
+    margin: 0 auto;
+    padding-top: 30px;
+    &__title{
+      display: block;
+      width: 100%;
+      height: 50px;
+    }
+    &__text{
+      display: block;
+      width: 100%;
+      height: 50%;
+      margin: 15px auto 0;
+    }
+    &__btn{
+      display: block;
+      width: 30%;
+      margin: 15px auto 0;
+    }
+  }
+  .user{
+    padding: 15px 30px;
+  }
+}
+

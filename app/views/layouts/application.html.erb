@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>StudyReview</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+  <header class="header">
+      <div class="header__title">
+        <%= link_to "Study-Review", root_path, class: "header__title--text" %>
+      </div>
+      <div class="header__right">
+        <% if user_signed_in? %>
+        <%# ログインしているか判別 %>
+          <span><%= current_user.name %>
+            <ul class="user__info">
+              <li>
+                <%= link_to "マイページ", user_path(current_user) %>
+                <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+          </span>
+          <%= link_to "投稿する", new_word_path, class: "header__right--btn" %>
+          </div>
+        <% else %>
+        <%# 未ログインユーザーに投稿させない %>
+          <%= link_to "ログイン", new_user_session_path, class: "header__right--btn" %>
+          <%= link_to "ユーザー登録", new_user_registration_path, class: "header__right--btn" %>
+        <% end %>
+      </div>
+    </header>
+    <div class="contents">
+      <%= yield %>
+    </div>
+  </body>
+</html>
