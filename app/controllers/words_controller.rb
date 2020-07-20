@@ -1,6 +1,6 @@
 class WordsController < ApplicationController
-  before_action :set_word, only: [:edit, :show]
-  before_action :move_to_index, except: [:index, :show]
+  before_action :set_word, only: [:edit, :show,]
+  before_action :move_to_index, except: [:index, :show, :search]
   # except以下、indexはリダイレクトの無限ループを防ぐ為。showはログインする必要が無い為。
   impressionist actions: [:show]
 
