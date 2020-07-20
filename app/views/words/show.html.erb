@@ -3,8 +3,6 @@
 </div>
 <div class="wordDate">
 <%=  @word.impressionist_count %>回確認済
-<%# <%= number_with_delimiter(@page_views) %> 
-  <%# <%= @word.created_at %> 
 </div>
 <div class="wordAuthor">
 </div>
@@ -22,7 +20,7 @@
   <% if current_user %>
     <%= form_with(model: [@word, @comment], local: true) do |form| %>
       <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-      <%= form.submit "登録" %>
+      <%= form.submit "登録", id: "comment-btn" %>
     <% end %>
   <% else %>
     <strong><p>※※※ コメントの登録には新規登録/ログインが必要です ※※※</p></strong>
