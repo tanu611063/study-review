@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
   resources :words do
     resources :comments, only: :create
+    resource :favorites, only: [:create, :destroy]
   end
   resources :users, only: :show
 end

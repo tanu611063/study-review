@@ -80,23 +80,25 @@ body{
     .search-form{
       text-align: center;
     }
-    .content{
+    .wordlist{
       padding: 10px;
       margin-left: 100px;
-      &__word{
-        &__title{
-          cursor: pointer;
-          &--name{
-            color: blue;
-            font-size: 25px;
-          }
-        }
-        &__user{
-          font-size: 15px;
-          &--name{
+      .content{
+        &__word{
+          &__title{
             cursor: pointer;
-            text-decoration: none;
-            color: black;
+            &--name{
+              color: blue;
+              font-size: 25px;
+            }
+          }
+          &__user{
+            font-size: 15px;
+            &--name{
+              cursor: pointer;
+              text-decoration: none;
+              color: black;
+            }
           }
         }
       }
@@ -119,27 +121,65 @@ body{
       font-weight: bold;
       text-shadow: 0 15px 15px;
     }
-    .userlist{
-      margin: 15px auto 0;
-      width: 70%;
+    .listbox{
+      display: flex;
       overflow: scroll;
-      &__box{
-        padding: 10px;
-        margin-left: 100px;
-        font-size: 25px;
-        display: flex;
-        a{
+      width: 100%;
+      padding: 10px;
+      .listmain{
+        width: 50%;
+        text-align: center;
+        p{
+          font-size: 30px;
           color: blue;
-          cursor: pointer;
-          font-weight: bold;
-          -webkit-border-radius: 15px;
-          text-decoration: none;
-          &:hover{
-            background-color: rgba($color: red, $alpha: 1.0);
+          text-decoration: underline;
+        }
+        .userlist{
+          &__box{
+            font-size: 25px;
+            margin: 0;
+            p{
+              color: black;
+              font-size: 15px;
+              text-decoration: none;
+            }
+            a{
+              color: black;
+              cursor: pointer;
+              font-weight: bold;
+              -webkit-border-radius: 15px;
+              text-decoration: none;
+              &:hover{
+                background-color: rgba($color: blue, $alpha: 1.0);
+              }
+            }
+            &--count{
+              font-size: 15px;
+            }
           }
         }
-        &--count{
-          margin-left: 15px;
+      }
+      .userfavorite{
+        text-align: center;
+        width: 50%;
+        p{
+          font-size: 30px;
+          color: blue;
+          text-decoration: underline;
+        }
+        .sublist{
+          &--word{
+            display: block;
+            font-size: 25px;
+            color: black;
+            text-decoration: none;
+            cursor: pointer;
+            font-weight: bold;
+            -webkit-border-radius: 15px;
+            &:hover{
+              background-color: rgba($color: blue, $alpha: 1.0);
+            }
+          }
         }
       }
     }
@@ -265,15 +305,5 @@ body{
     margin-top: 20px;
     text-align: center;
   }
-  .iine__button{
-    background: linear-gradient(to right, #feb400, #FFE300);
-    line-height: 42px;
-    color: #6d3701;
-    font-size: 14px;
-    display: inline-block;
-    padding: 0 18px;
-    border-radius: 100px;
-    font-weight: bold;
- }
 }
   

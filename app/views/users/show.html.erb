@@ -1,14 +1,29 @@
 <div class="wordTitle">
-  <%= @user.name %>さんの投稿一覧
+  <%= @user.name %>さんの履歴一覧
 </div>
-<% @words.each do |word| %>
-<div class="userlist">
-  <div class="userlist__box">
-      <%= link_to word.title, word_path(word.id), class: "content__box--title" %>
-      <div class="userlist__box--count">
-        <%= word.impressionist_count %>回確認
+<div class="listbox">
+  <div class="listmain">
+    <p>投稿履歴</p>
+    <% @words.each do |word| %>
+    <div class="userlist">
+      <div class="userlist__box">
+        <%= link_to word.title, word_path(word.id), class: "content__box--title" %>
+        <div class="userlist__box--count">
+          (<%= word.impressionist_count %>回確認済)
+        </div>
+        <div id="favorites_buttons_<%= word.id %>">
+          <%= render partial: 'favorites/favorite', locals: { word: word} %>
+        </div>
       </div>
+    </div>
+    <% end %>
   </div>
-</div>
-<% end %>
+  <div class="userfavorite">
+    <p>CheckList</p>
+    <div class="sublist">
+    <% @favorite_words.each do |word| %>
+      <%=link_to word.title, word_path(word.id), class: "sublist--word"  %>
+    <% end %>
+  </div>
 <%= paginate(@words) %>
+</div>

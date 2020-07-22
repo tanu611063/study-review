@@ -3,6 +3,7 @@ class Word < ApplicationRecord
   validates :explanation, presence: true
   belongs_to :user
   has_many :comments
+  has_many :favorites
   is_impressionable 
   
   def self.search(search)
@@ -15,4 +16,9 @@ class Word < ApplicationRecord
     # searchの中身がなければ、全ての投稿を表示
     end
   end
+
+  def favorited_by?(user)
+    favorites.where(user_id: user.id).exists?
+  end
+
 end

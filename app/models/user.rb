@@ -6,4 +6,6 @@ class User < ApplicationRecord
 
   has_many :words
   has_many :comments
+  has_many :favorites
+  has_many :favorite_words, through: :favorites, source: :word
 end
