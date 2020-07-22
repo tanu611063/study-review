@@ -2,13 +2,13 @@
   <%= @user.name %>さんの投稿一覧
 </div>
 <% @words.each do |word| %>
-  <div class="content">
-    <div class="content__right">
-      <div class="content__right__top">
-        <%= link_to word.title, word_path(word.id), class: "content__right__top--title" %>
-        <%= word.impressionist_count %>回確認済
+<div class="userlist">
+  <div class="userlist__box">
+      <%= link_to word.title, word_path(word.id), class: "content__box--title" %>
+      <div class="userlist__box--count">
+        <%= word.impressionist_count %>回確認
       </div>
-    </div>
   </div>
+</div>
 <% end %>
 <%= paginate(@words) %>

@@ -5,5 +5,5 @@
 <%# @wordの中身に応じて処理を変更。今回は中身がnewではなく存在する為編集 %>
   <%= form.text_field :title, placeholder: :暗記項目, class: :form__title %>
   <%= form.text_area :explanation, placeholder: :説明文, class: :form__text %>
-  <%= form.submit '投稿する', class: :form__btn %>
+  <%= form.submit '編集', class: :form__btn %>
 <% end %>
