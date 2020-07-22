@@ -4,8 +4,6 @@
 <div class="wordDate">
 <%=  @word.impressionist_count %>回確認済
 </div>
-<div class="wordAuthor">
-</div>
 <% if user_signed_in? && current_user.id == @word.user_id %>
 <div class="wordManage">
   <%= link_to "編集", edit_word_path(@word.id), class: "wordManage__edit" %>
@@ -19,8 +17,8 @@
 <div class="container">
   <% if current_user %>
     <%= form_with(model: [@word, @comment], local: true) do |form| %>
-      <%= form.text_area :text, placeholder: "コメントする", rows: "2" %>
-      <%= form.submit "登録", id: "comment-btn" %>
+      <%= form.text_area :text, placeholder: "コメントする", rows: "2", id:"comment-area" %>
+      <%= form.submit "投稿", id: "comment-btn" %>
     <% end %>
   <% else %>
     <strong><p>※※※ コメントの登録には新規登録/ログインが必要です ※※※</p></strong>
@@ -32,10 +30,10 @@
   <%# コメントがある場合 %>
     <% @comments.each do |comment| %>
     <%# @commentsの配列の中身であるレコードを取り出す %>
-      <p>
-        <strong><%= link_to comment.user.name, "/users/#{comment.user_id}" %>：</strong>
+      <div class="comments__list">
+        <%= link_to comment.user.name, "/users/#{comment.user_id}", class: "comments__list__name" %>：
         <%= comment.text %>
-      </p>
+      </div>
     <% end %>
   <% end %>
 </div>

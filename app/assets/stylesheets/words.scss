@@ -3,39 +3,38 @@ body{
   background-image: url("freenut.jpg");
   background-size: cover;
   .header{
-    height: 56px;
+    height: 100px;
     width: 100%;
     padding: 0 150px;
-    color: red;
     display: flex;
     justify-content: space-between;
+    position: sticky;
     &__title{
-      font-size: 30px;
-      line-height: 56px;
-      font-family: fantasy;
+      font-size: 50px;
+      line-height: 100px;
       &--text{
+        font-family: fantasy;
         text-decoration: none;
-        color: blue;
+        color: darkblue;
+        text-shadow: 0 15px 15px;
+        letter-spacing: 3px;
+        cursor: pointer;
       }
     }
-    &__right{
-        position: relative;
-        height: 50px;
-        right: 0;
+    &__top{
+      color: black;
         span {
-          top: 5px;
-          display: block;
+          top: 33px;
+          width: 100px;
           float: left;
-          width: 150px;
-          height: 50px;
-          font-size: 1.2em;
+          font-size: 25px;
           text-align: center;
-          line-height: 50px;
+          text-shadow: 0 15px 15px;
           cursor: pointer;
           position: relative;
           &:after {
-            content: '▼';
-            font-size: 1em;
+            // content: '▼';
+            font-size: 25px;
             margin-left: -4px;
           }
           &:hover ul {
@@ -43,26 +42,33 @@ body{
           }
         }
         ul {
+          font-size: 20px;
           display: none;
           position: absolute;
           right: 0;
-          border-left: 1px solid #d8d8d8;
-          border-right: 1px solid #d8d8d8;
           box-shadow: 1px 2px 5px rgba(0,0,0,0.1);
-          li {
-            background-color: #f0f0f0;
-            a {
-              padding: 10px 20px;
-              border-bottom: 1px solid #d8d8d8;
+          a{
+            text-decoration: none;
+            color: black;
+            -webkit-border-radius: 15px;
+            font-weight: bold;
+            &:hover{
+              background-color: rgba($color: blue, $alpha: 1.0);
             }
           }
         } 
       &--btn{
         text-decoration: none;
-        line-height: 56px;
-        color: red;
+        line-height: 100px;
+        color: black;
         margin-left: 15px;
         cursor: pointer;
+        font-size: 30px;
+        font-weight: bold;
+        -webkit-border-radius: 15px;
+        &:hover{
+          background-color: rgba($color: blue, $alpha: 1.0);
+        }
       }
     }
   }
@@ -71,53 +77,76 @@ body{
     height: calc(100vh - 56px);
     width: 70%;
     overflow: scroll;
+    .search-form{
+      text-align: center;
+    }
     .content{
       padding: 10px;
-      border-bottom: 1px solid lightgray;
-      display: flex;
-      &__right{
-        &__top{
-          font-size: larger;
-          margin: 0;
+      margin-left: 100px;
+      &__word{
+        &__title{
           cursor: pointer;
-          &--title{
-            color: red;
+          &--name{
+            color: blue;
+            font-size: 25px;
           }
         }
-        &__bottom{
+        &__user{
           font-size: 15px;
-          display: flex;
-          &--userName{
+          &--name{
             cursor: pointer;
-            &--btn{
-              text-decoration: none;
-              color: green;
-            }
+            text-decoration: none;
+            color: black;
           }
         }
       }
     }
-    &__title{
+    .pagination{
       font-size: 30px;
+      color: black;
       font-weight: bold;
       padding-top: 30px;
       text-align: center;
+      cursor: pointer;
+      a{
+        color: black;
+      }
+    }
+    .wordTitle{
+      padding-top: 20px;
+      text-align: center;
+      font-size: 30px;
+      font-weight: bold;
+      text-shadow: 0 15px 15px;
+    }
+    .userlist{
+      margin: 15px auto 0;
+      width: 70%;
+      overflow: scroll;
+      &__box{
+        padding: 10px;
+        margin-left: 100px;
+        font-size: 25px;
+        display: flex;
+        a{
+          color: blue;
+          cursor: pointer;
+          font-weight: bold;
+          -webkit-border-radius: 15px;
+          text-decoration: none;
+          &:hover{
+            background-color: rgba($color: red, $alpha: 1.0);
+          }
+        }
+        &--count{
+          margin-left: 15px;
+        }
+      }
     }
   }
-  .wordTitle{
-    padding-top: 20px;
-    text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-  }
   .wordDate{
-    font-size: 15px;
-    color: black;
-    text-align: center;
-  }
-  .wordAuthor{
-    font-size: 15px;
-    color: black;
+    font-size: 20px;
+    color: darkblue;
     text-align: center;
   }
   .wordManage{
@@ -127,7 +156,8 @@ body{
     &__edit{
       display: block;
       border-radius: 5px;
-      color: blue;
+      color: black;
+      font-size: 25px;
       padding: 0 10px;
       text-decoration: none;
       margin-left: 10px;
@@ -136,6 +166,7 @@ body{
       display: block;
       border-radius: 5px;
       color: red;
+      font-size: 25px;
       padding: 0 10px;
       text-decoration: none;
       margin-left: 10px;
@@ -143,6 +174,48 @@ body{
   }
   .wordText{
     margin: 20px 30px;
+    padding: 0 20px 0 ;
+    background-color: whitesmoke;
+    font-size: 25px;
+  }
+  .container{
+    text-align: center;
+    #comment-area{
+      width: 400px;
+      height: 60px;
+    }
+    #comment-btn{
+      cursor: pointer;
+      margin-top: 10px;
+      line-height: 30px;
+      width: 80px;
+    }
+    p{
+      font-size: 20px;
+      color: red;
+      font-weight: bold;
+    }
+  }
+  .comments{
+    margin: 0 30px;
+    h4{
+      font-size: 30px;
+      text-align: center;
+      color: orangered
+    }
+    &__list{
+      padding: 10px 20px 10px ;
+      background-color: whitesmoke;
+      color: black;
+      font-size: 20px;
+      &__name{
+        text-decoration: none;
+      }
+    }
+  }
+  .newcontent__title{
+    text-align: center;
+    font-size: 30px;
   }
   .form{
     width: 85%;
@@ -169,5 +242,38 @@ body{
   .user{
     padding: 15px 30px;
   }
+  h2{
+    text-align: center;
+    font-size: 30px;
+  }
+  label{
+    font-size: 20px;
+  }
+  .field{
+    text-align: center;
+    #user_name{
+      width: 200px;
+    }
+    #user_email{
+      width: 200px;
+    }
+    #user_password{
+      width: 200px;
+    }
+  }
+  .actions{
+    margin-top: 20px;
+    text-align: center;
+  }
+  .iine__button{
+    background: linear-gradient(to right, #feb400, #FFE300);
+    line-height: 42px;
+    color: #6d3701;
+    font-size: 14px;
+    display: inline-block;
+    padding: 0 18px;
+    border-radius: 100px;
+    font-weight: bold;
+ }
 }
-
+  
