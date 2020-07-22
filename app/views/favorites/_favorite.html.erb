@@ -1,0 +1,9 @@
+<% if user_signed_in? %>
+  <% if word.favorited_by?(current_user) %> <!-- ログインしているユーザーがファボしたかどうかで分岐 -->
+    <p><span>CheckList登録中: </span><%=link_to word.favorites.count, word_favorites_path(word.id), method: :delete, remote: true %></p>
+  <% else %>
+    <p><span>CheckList解除中: </span><%=link_to word.favorites.count, word_favorites_path(word.id), method: :post, remote: true %></p>
+  <% end %>
+<% else %>
+  <p><span>Check数: </span><%= word.favorites.count %></p>
+<% end %>
