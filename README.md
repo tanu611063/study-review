@@ -11,9 +11,9 @@ AWS EC2で自動デプロイまで行えるようにしております。
 http://3.23.171.242/
 
 # テスト用アカウント
-ニックネーム    太郎
-メールアドレス  taro@sample.co.jp
-パスワ-ド      taro00
+(ニックネーム)    太郎
+(メールアドレス)  taro@sample.co.jp
+(パスワ-ド)      taro00
 
 # 動作確認方法
 Chromeの最新版を利用してアクセスしてください。
@@ -36,18 +36,18 @@ PV数を計測する機能で何回調べたかを可視化出来るようにし
 随時修正を行い、より使い易く効率的なアプリケーションを目指しております。
 
 # 使用技術
-Visual Studio Code
-HTML
-CSS
-Javascript 
-Ruby 2.5.1 
-Ruby on Rails 5.2.3 (RSpecによるテスト等も含む)
-MySQL
-Linux
-Nginx 
-Git / GitHub 
-Capistrano
-AWS
+Visual Studio Code,
+HTML,
+CSS,
+Javascript ,
+Ruby 2.5.1 ,
+Ruby on Rails 5.2.3 (RSpecによるテスト等も含む),
+MySQL,
+Linux,
+Nginx ,
+Git / GitHub ,
+Capistrano,
+AWS,
 EC2  
 
 # 機能一覧
