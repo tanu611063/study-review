@@ -6,7 +6,7 @@
 機能としてはシンプルですが、実際に使用していく中でアップデートを行っております。  
 TECH:EXPERTで学んだ内容をベースに作成しております。  
 AWS EC2で自動デプロイまで行えるようにしております。  
-![study-review.jpg](file:///Users/tanumayuu/Pictures/study-review.jpg "study-review")
+![study-review.jpg](https://drive.google.com/file/d/1HiWAgXhTCwQbeKX5N1ERORcOCBhM8pHb/view?usp=sharing)
 # URL
 http://3.23.171.242/
 
