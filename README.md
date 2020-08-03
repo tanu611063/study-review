@@ -6,7 +6,7 @@
 機能としてはシンプルですが、実際に使用していく中でアップデートを行っております。  
 TECH:EXPERTで学んだ内容をベースに作成しております。  
 AWS EC2で自動デプロイまで行えるようにしております。  
-![study-review.jpg](https://drive.google.com/file/d/1HiWAgXhTCwQbeKX5N1ERORcOCBhM8pHb/view?usp=sharing)
+![study-review](https://user-images.githubusercontent.com/65527789/89136765-3c1fec80-d570-11ea-897a-bd5994c8e38f.jpg)
 # URL
 http://3.23.171.242/
 
