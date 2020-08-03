@@ -7,6 +7,9 @@
 TECH:EXPERTで学んだ内容をベースに作成しております。  
 AWS EC2で自動デプロイまで行えるようにしております。  
 ![study-review](https://user-images.githubusercontent.com/65527789/89136765-3c1fec80-d570-11ea-897a-bd5994c8e38f.jpg)
+![study-review2](https://user-images.githubusercontent.com/65527789/89137313-b6ea0700-d572-11ea-8f36-06f67b17d292.jpg)
+![study-review4](https://user-images.githubusercontent.com/65527789/89137327-c0736f00-d572-11ea-8e67-d3f864b56b2a.jpg)
+
 # URL
 http://3.23.171.242/
 
