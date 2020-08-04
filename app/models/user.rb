@@ -9,7 +9,7 @@ class User < ApplicationRecord
   has_many :favorites
   has_many :favorite_words, through: :favorites, source: :word
   
-  validates :name, presence: true, length: { maximum: 10 }
+  validates :name, presence: true, uniqueness: true, length: { maximum: 10 }
   validates :email, presence: true, uniqueness: true
   validates :password, presence: true, length: { minimum: 6 }
   validates :password_confirmation, presence: true, length: { minimum: 6 }
