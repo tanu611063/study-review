@@ -5,7 +5,7 @@ class WordsController < ApplicationController
   impressionist actions: [:show]
 
   def index
-    @words = Word.includes(:user).order("created_at DESC").page(params[:page]).per(10)
+    @words = Word.includes(:user).order("created_at DESC").page(params[:page]).per(5)
     # userと紐付けされた情報
   end
 

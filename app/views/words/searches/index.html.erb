@@ -9,4 +9,5 @@
       <%= render partial: 'favorites/favorite', locals: { word: word} %>
     </div>
   <% end %>
+  <%= paginate(@words) %>
 </div>
