@@ -17,6 +17,7 @@
       </div>
     </div>
     <% end %>
+  <%= paginate(@words) %>
   </div>
   <div class="userfavorite">
     <p>CheckList</p>
@@ -25,5 +26,4 @@
       <%=link_to word.title, word_path(word.id), class: "sublist--word"  %>
     <% end %>
   </div>
-<%= paginate(@words) %>
 </div>
