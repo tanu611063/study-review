@@ -219,14 +219,15 @@ body{
   .container{
     text-align: center;
     #comment-area{
-      width: 400px;
-      height: 60px;
+      width: 50vw;
+      height: 70px;
     }
     #comment-btn{
       cursor: pointer;
       margin-top: 10px;
-      line-height: 30px;
+      line-height: 40px;
       width: 80px;
+      -webkit-border-radius: 15px;
     }
     p{
       font-size: 20px;
