@@ -276,9 +276,16 @@ body{
     }
     &__btn{
       display: block;
+      font-size: 20px;
+      font-weight: bold;
       width: 30%;
       margin: 15px auto 0;
       -webkit-border-radius: 15px;
+      background-color: #333;
+      color: #fff;
+    }
+    &__btn:hover {
+      background-color:blue;
     }
   }
   .user{

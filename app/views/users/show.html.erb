@@ -20,7 +20,7 @@
   <%= paginate(@words) %>
   </div>
   <div class="userfavorite">
-    <p>＜CheckList＞</p>
+    <p>＜CheckList＞＞</p>
     <div class="sublist">
     <% @favorite_words.each do |word| %>
       <%=link_to word.title, word_path(word.id), class: "sublist--word"  %>
