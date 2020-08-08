@@ -212,7 +212,6 @@ body{
     }
   }
   .wordText{
-    margin: 20px 30px;
     padding: 0 20px 0 ;
     background-color: whitesmoke;
     font-size: 25px;
@@ -229,6 +228,8 @@ body{
       line-height: 40px;
       width: 80px;
       -webkit-border-radius: 15px;
+      font-weight: bold;
+      font-size: 20px;
     }
     p{
       font-size: 20px;
@@ -237,7 +238,7 @@ body{
     }
   }
   .comments{
-    margin: 0 30px;
+    margin-bottom: 20px;
     h4{
       font-size: 30px;
       text-align: center;
