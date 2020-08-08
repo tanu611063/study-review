@@ -3,7 +3,7 @@
 </div>
 <div class="listbox">
   <div class="listmain">
-    <p>投稿履歴</p>
+    <p>＜投稿履歴＞</p>
     <% @words.each do |word| %>
     <div class="userlist">
       <div class="userlist__box">
@@ -20,7 +20,7 @@
   <%= paginate(@words) %>
   </div>
   <div class="userfavorite">
-    <p>CheckList</p>
+    <p>＜CheckList＞</p>
     <div class="sublist">
     <% @favorite_words.each do |word| %>
       <%=link_to word.title, word_path(word.id), class: "sublist--word"  %>
