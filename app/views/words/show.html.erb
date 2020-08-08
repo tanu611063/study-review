@@ -2,7 +2,7 @@
   <%= @word.title %>
 </div>
 <div class="wordDate">
-<%=  @word.impressionist_count %>回確認済
+＜<%=  @word.impressionist_count %>回確認済＞
 </div>
 <% if user_signed_in? && current_user.id == @word.user_id %>
 <div class="wordManage">
