@@ -60,14 +60,14 @@ body{
       &--btn{
         text-decoration: none;
         line-height: 100px;
-        color: black;
-        margin-left: 25px;
+        margin-left: 40px;
         cursor: pointer;
-        font-size: 30px;
-        font-weight: bold;
+        font-size: 50px;
         -webkit-border-radius: 15px;
+        background-color: #333;
+        color: #fff;
         &:hover{
-          background-color: rgba($color: blue, $alpha: 1.0);
+          background-color: blue;
         }
       }
     }
