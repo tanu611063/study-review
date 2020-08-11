@@ -195,20 +195,30 @@ body{
     &__edit{
       display: block;
       border-radius: 5px;
-      color: black;
-      font-size: 25px;
+      font-size: 20px;
       padding: 0 10px;
       text-decoration: none;
       margin-left: 10px;
+      -webkit-border-radius: 15px;
+      background-color: whitesmoke;
+      color: black;
+      &:hover{
+        background-color: blue;
+      }
     }
     &__delete{
       display: block;
       border-radius: 5px;
-      color: red;
-      font-size: 25px;
+      color: black;
+      font-size: 20px;
       padding: 0 10px;
       text-decoration: none;
       margin-left: 10px;
+      -webkit-border-radius: 15px;
+      background-color: whitesmoke;
+      &:hover{
+        background-color: red;
+      }
     }
   }
   .wordText{
@@ -321,6 +331,13 @@ body{
   #error_explanation{
     text-align: center;
     color: red;
+  }
+  .editTitle{
+    padding-top: 20px;
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+    text-shadow: 0 15px 15px;
   }
 }
   
