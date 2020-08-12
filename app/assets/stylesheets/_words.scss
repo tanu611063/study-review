@@ -2,6 +2,8 @@ body{
   min-width: 650px;
   background-image: image-url("freenut.jpg");
   background-size: cover;
+  background-position: center;
+  width: 100%;
   .header{
     height: 10vh;
     width: 100%;
@@ -63,7 +65,7 @@ body{
         margin-left: 40px;
         cursor: pointer;
         font-size: 50px;
-        -webkit-border-radius: 15px;
+        border-radius: 15px;
         background-color: #333;
         color: #fff;
         &:hover{
