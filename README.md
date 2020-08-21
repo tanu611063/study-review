@@ -11,7 +11,7 @@ AWS EC2で自動デプロイまで行えるようにしております。
 ![study-review4](https://user-images.githubusercontent.com/65527789/89137327-c0736f00-d572-11ea-8e67-d3f864b56b2a.jpg)
 
 # URL
-http://3.23.171.242/
+http://54.150.84.49
 
 # テスト用アカウント
 (ニックネーム)    `太郎`  
