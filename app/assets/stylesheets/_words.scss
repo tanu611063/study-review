@@ -68,10 +68,12 @@ body{
         border-radius: 15px;
         background-color: #333;
         color: #fff;
-        transition: all 1s;
+        transition: all 0.2s;
+        box-shadow: 2px 2px 0 0 black;
+        border-radius: 7px;
         &:hover{
-          background-color: blue;
-          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
+          transform: translate(2px, 2px);
+          box-shadow: none;
         }
       }
     }
