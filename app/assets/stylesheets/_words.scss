@@ -68,8 +68,10 @@ body{
         border-radius: 15px;
         background-color: #333;
         color: #fff;
+        transition: all 1s;
         &:hover{
           background-color: blue;
+          box-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.5);
         }
       }
     }
@@ -205,8 +207,10 @@ body{
       -webkit-border-radius: 15px;
       background-color: whitesmoke;
       color: black;
+      transition: all 1s;
       &:hover{
         background-color: blue;
+        color: white;
       }
     }
     &__delete{
@@ -219,6 +223,7 @@ body{
       margin-left: 10px;
       -webkit-border-radius: 15px;
       background-color: whitesmoke;
+      transition: all 1s;
       &:hover{
         background-color: red;
       }
@@ -239,10 +244,15 @@ body{
       cursor: pointer;
       margin-top: 10px;
       line-height: 40px;
-      width: 80px;
+      width: 100px;
       -webkit-border-radius: 15px;
       font-weight: bold;
       font-size: 20px;
+      transition: all 1s;
+    }
+    #comment-btn:hover{
+      background-color: black;
+      color: white;
     }
     p{
       font-size: 20px;
@@ -301,9 +311,11 @@ body{
       -webkit-border-radius: 15px;
       background-color: #333;
       color: #fff;
+      transition: all 1s;
     }
     &__btn:hover {
       background-color:blue;
+      color: black;
     }
   }
   .user{
