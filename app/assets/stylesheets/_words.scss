@@ -1,5 +1,6 @@
 body{
-  min-width: 650px;
+  max-width: 100%;
+  min-width: 350px;
   background-image: image-url("freenut.jpg");
   background-size: cover;
   background-position: center;
@@ -259,10 +260,10 @@ body{
       font-weight: bold;
       font-size: 20px;
       transition: all 1s;
-    }
-    #comment-btn:hover{
-      background-color: black;
-      color: white;
+      &:hover{
+        background-color: black;
+        color: white;
+      }
     }
     p{
       font-size: 20px;
